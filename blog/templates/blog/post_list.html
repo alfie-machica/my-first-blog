@@ -8,7 +8,15 @@
 		</div>
 
 		<div>
-			{{posts}}
+			<h3>start div</h3>
+			{%for post in posts%}
+				<div>
+					<p>published: {{ post.published_date}}</p>
+					<h2><a href = ""> {{post.title}}</a></h2>
+					<p>{{post.text|linebreaksbr}}</p>
+					<br>
+				</div>
+			{%endfor%}
 		</div>
 
 	</body>
