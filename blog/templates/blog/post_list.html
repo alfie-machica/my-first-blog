@@ -8,16 +8,14 @@
 		</div>
 
 		<div>
-			<p>published: 01.09.2019, 12:53</p>
-			<h2><a href="">Post 01</a></h2>
-			<p>Paragraph 01</p>
-		</div>
-		<br>
-
-		<div>
-			<p>published: 01.09.2019, 12:53</p>
-			<h2><a href="">Post 02</a></h2>
-			<p>Paragraph 02</p>
+			{%for post in posts%}
+				<div>
+					<p>published: {{ post.published_date}}</p>
+					<h2><a href = ""> {{post.title}}</a></h2>
+					<p>{{post.text|linebreaksbr}}</p>
+					<br>
+				</div>
+			{%endfor%}
 		</div>
 
 	</body>
